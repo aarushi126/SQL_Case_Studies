@@ -249,8 +249,9 @@ group by customer_id;
 #### Output:
 |customer_id	|total_points|
 |:----------:|:-----------:|
-|A|	510|
-|B|	440|
+|A|	860|
+|B|	940|
+|C|	360|
 
 ###  10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customers A and B have at the end of January
 
