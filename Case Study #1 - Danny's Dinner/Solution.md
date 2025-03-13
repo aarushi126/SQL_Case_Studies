@@ -62,7 +62,7 @@ ORDER BY customer_id;
 </details>
 
 #### Output:
-|customer|spentamount_cust|
+|customer| total_amount|
 |--------|----------------|
 |A|	76
 |B	|74
@@ -82,7 +82,7 @@ group by customer_id;
 </details>
 
 #### Output:
-|customer_id|	Visit_frequency|
+|customer_id|	number_of_days_visited|
 |-----------|----------------|
 |A|	4
 |B	|6
@@ -109,7 +109,7 @@ where c.order_date = t.dates;
 </details>
 	
 #### Output:
-|customer	|food_item|
+|customer	|product_name|
 |--------|----------|
 |A|	sushi
 |B	|curry
@@ -130,13 +130,13 @@ order by No_times_ordered desc;
 </details>
 
 #### Output:
-|product_name|	order_count|
+|product_name|	 No_times_ordered|
 |------------|-------------|
 |ramen	|8|
 ***
 
 ###  5. Which item was the most popular for each customer?
--- Asssumption: Products with the highest purchase counts are all considered to be popular for each customer
+-- Assumption: Products with the highest purchase counts are all considered to be popular for each customer
 <details>
   <summary>Click here for the solution</summary>
   
@@ -154,13 +154,13 @@ where rnk = 1;
 
 #### Output:
 
-| customer_id  | product_name  | order_count  | rank  |
-|--------------|---------------|--------------|-------|
-| A            | ramen         | 3            | 1     |
-| B            | ramen         | 2            | 1     |
-| B            | curry         | 2            | 1     |
-| B            | sushi         | 2            | 1     |
-| C            | ramen         | 3            | 1     |
+| customer_id  | product_name  | 
+|--------------|---------------|
+| A            | ramen         | 
+| B            | ramen         |
+| B            | curry         |
+| B            | sushi         |
+| C            | ramen         |
 
 ***
 
@@ -180,10 +180,10 @@ where rnk = 1;
 </details>
 
 #### Output:
-|customer_id|	product_name|	order_date|	purchase_order|
-|:---------:|:-----------:|:--------:|:-------------:|
-|A|	curry|	2021-01-07|	1|
-|B	|sushi|	2021-01-11	|1|
+|customer_id|	first_product_purchased_after_becoming_member|	
+|:---------:|:-----------:|
+|A|	curry|	
+|B	|sushi|	
 
 ***
 
@@ -202,11 +202,11 @@ where rnk = 1;
 </details>
 
 #### Output:
-|customer_id	|product_name|	order_date	|purchase_order|
-|:---------:|:------------:|:----------:|:-------------:|
-|A	|sushi|	2021-01-01|	1|
-|A	|curry|	2021-01-01|	1|
-|B|	sushi|	2021-01-04|	1|
+|customer_id	|item_purchased_just_before_becoming_member|	
+|:---------:|:------------:|
+|A	|sushi|	
+|A	|curry|	
+|B|	sushi|	
 
 ***
 
@@ -223,10 +223,10 @@ group by customer_id;
 </details>
 
 #### Output:
-|customer_id	|total_spent	|total_items|
+|customer_id	|total_item_bought|total_spent	|
 |:---------:|:------------:|:---------:|
-|A|	25|	2|
-|B	|40|	3|
+|A|		2| 25|
+|B	|	3|40|
 
 ***
 
@@ -252,7 +252,7 @@ group by customer_id;
 |A|	510|
 |B|	440|
 
-###  10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January
+###  10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customers A and B have at the end of January
 
 <details>
   <summary>Click here for the solution</summary>
@@ -274,8 +274,8 @@ group by customer_id;
 #### Output:
 |customer_id	|customer_points|
 |:----------:|:-------------:|
-|A|	1020|
-|B|	440|
+|A|	1370|
+|B|	940|
 
 ***
 
