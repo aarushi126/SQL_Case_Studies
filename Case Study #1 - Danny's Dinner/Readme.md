@@ -54,4 +54,4 @@ Three key datasets for this case study
 - Customers A, B, and C have earned Total points of 860, 940, and 360 based on their purchases without their membership.    
 - As Customers A and B took membership and can earn 20 points for every $1 spent irrespective of the items, they earned total Points of 1010 and 820 by the end of January 2021.    
   
-Click [here]() to view the solution of the case study!
+Click [here](https://github.com/aarushi126/SQL_Case_Studies/blob/main/Case%20Study%20%231%20-%20Danny's%20Dinner/Solution.md) to view the solution of the case study!
